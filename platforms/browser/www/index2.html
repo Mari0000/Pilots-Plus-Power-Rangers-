@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="js/myScript.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/coordinatestoname.js"></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 60%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Pilots Plus</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="index2.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+    <div id="map">
+         
+    </div>
+    <div class="Data">
+       <div class="card">
+         <div class="card-tabs">
+            <ul class="tabs">
+              <li class="tab"><a href="#plants">Plants</a></li>
+              <li class="tab"><a class="active" href="#interested-places">Interested Places</a></li>
+              <!-- <li class="tab"><a href="#animal-habitats">Animal Habitats</a></li> -->
+            </ul>
+          </div>
+        <div class="card-content grey lighten-4">
+        <div id="plants" style="height: 1000px;">
+          <object>
+            <embed class="plants-all" src="" style="width: 100%; height: 1000px"></embed>
+          </object>
+             
+        </div>
+        <div id="interested-places">
+            <div class='row'>
+            </div>
+        </div>
+        <!-- <div id="animal-habitats"></div> -->
+        </div>
+       </div>
+    </div>
+   <!-- <button class="stopBtn btn waves-effect waves-light">
+        <i class="material-icons right">Stop</i>
+    </button> --> 
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRg5vvvyMY03fGJVtWYV6PURMfQMe2aW8&libraries=places"
+    async defer></script>
+   
+    <!-- <script>
+      $(function(){
+         
+        $.ajax({
+               type: "GET",
+               dataType: "jsonp",
+               crossDomain:true,
+               url: "http://powo.science.kew.org/api/1/suggest?query=Quercus",
+               success: function(res){
+                  $("div#animal-habitats").append("success"); 
+                }
+               });
+        
+      });
+        
+        
+    </script> -->
+  </body>
+</html>
